@@ -41,7 +41,7 @@ form label {
 }
 
 form textarea {
-  border-radius: none;
+  border-radius: 0px;
 }
 
 .container {
@@ -60,7 +60,7 @@ form textarea {
   background: -moz-linear-gradient(#5FBA7D, #0D9D6C); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#5FBA7D, #0D9D6C); /* Standard syntax */
   border: none;
-  border-radius: none;
+  border-radius: 0px;
   color: #fff;
   cursor: pointer;
   font-size: 14px;

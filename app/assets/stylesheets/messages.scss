@@ -40,6 +40,10 @@ form label {
   font-family: sans-serif;
 }
 
+form textarea {
+  border-radius: none;
+}
+
 .container {
   width: 480px;
   margin: 0 auto;
@@ -56,6 +60,7 @@ form label {
   background: -moz-linear-gradient(#5FBA7D, #0D9D6C); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#5FBA7D, #0D9D6C); /* Standard syntax */
   border: none;
+  border-radius: none;
   color: #fff;
   cursor: pointer;
   font-size: 14px;

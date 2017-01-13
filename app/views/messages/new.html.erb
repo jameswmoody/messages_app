@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <img src="http://vignette2.wikia.nocookie.net/titanfall/images/3/3a/Icon_Chat.png/revision/latest?cb=20140504182858">
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+
+    <!-- Your code here -->
+
+    <%= form_for(@message) do |f| %>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
+  </div>
+</div>

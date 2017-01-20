@@ -7,6 +7,10 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
+  def delete
+    @message = Message.delete
+  end
+
   def create
     @message = Message.new(message_params)
     if @message.save

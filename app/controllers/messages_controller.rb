@@ -7,10 +7,6 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
-  def delete
-    @message = Message.delete
-  end
-
   def create
     @message = Message.new(message_params)
     if @message.save
@@ -18,6 +14,13 @@ class MessagesController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
+
+    redirect_to messages_path
   end
 
   private

@@ -4,6 +4,8 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
 
 html, body, p {
   margin: 0;
@@ -30,10 +32,20 @@ body {
   margin: 15px 0 0;
   width: 60px;
   opacity: 0.5;
+  display: inline;
 }
 
-.header h1 {
-  text-indent: -9999px;
+h1 {
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #fff;
+  opacity: 0.5;
+  position: relative;
+  bottom: 10px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: normal;
+  font-size: 42px;
 }
 
 form label {

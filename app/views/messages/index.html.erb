@@ -1,41 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MessagesApp</title>
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-  <div class="header">
+<div class="messages">
   <div class="container">
-  <h1>MessagesApp</h1> <img src="http://vignette2.wikia.nocookie.net/titanfall/images/3/3a/Icon_Chat.png/revision/latest?cb=20140504182858">
-  </div>
-  </div>
+    <% @messages.each do |message| %>
+    <div class="message">
+    <p class="content"><%= message.content %></p>
+    <p class="time"><%= message.created_at.strftime("%l:%M%p %Z %b %d, %Y") %>
+      <%= link_to 'Delete', message_path(message),
+          class: "delete-link",
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></p>
+    </div>
+      <% end %>
+      <%= link_to 'New Message', "messages/new",
+                  class: "global-btn" %>
 
-  <div class="messages">
-  <div class="container">
-
-  <!-- Your code here -->
-  <% @messages.each do |message| %>
-  <div class="message">
-  <p class="content"><%= message.content %></p>
-  <p class="time"><%= message.created_at.strftime("%l:%M%p %Z %b %d, %Y") %>
-     <%= link_to 'Delete', message_path(message),
-         class: "delete-link",
-         method: :delete,
-         data: { confirm: 'Are you sure?' } %></p>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
-  <% end %>
-  <%= link_to 'New Message', "messages/new",
-      class: "global-btn" %>
-
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
-  </div>
-</body>
-</html>
+</div>

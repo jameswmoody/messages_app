@@ -1,12 +1,24 @@
-<% provide(:title, 'Sign up') %>
-<div class="header">
-<div class="container">
-<h1>MessagesApp</h1> <img src="http://vignette2.wikia.nocookie.net/titanfall/images/3/3a/Icon_Chat.png/revision/latest?cb=20140504182858">
-</div>
-</div>
-
 <div class="container">
   <% provide(:title, 'Sign up') %>
-  <h2>Sign up</h2>
-  <p>This will be a signup page for new users.</p>
+  <h1>Sign up</h1>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@user, url: signup_path) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation %>
+
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </div>

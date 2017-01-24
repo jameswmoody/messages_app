@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>MessagesApp</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MessagesApp</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
+    <div class="header">
+      <div class="container">
+        <h1 class="logo">MessagesApp</h1> <img src="http://vignette2.wikia.nocookie.net/titanfall/images/3/3a/Icon_Chat.png/revision/latest?cb=20140504182858">
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

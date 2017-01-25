@@ -4,10 +4,12 @@
     <div class="message">
     <p class="content"><%= message.content %></p>
     <p class="time"><%= time_ago_in_words(message.created_at) %>
-      <%= link_to 'Delete', message_path(message),
-          class: "delete-link",
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %></p>
+      <% if logged_in? %>
+        <%= link_to 'Delete', message_path(message),
+            class: "delete-link",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
     </div>
       <% end %>
 

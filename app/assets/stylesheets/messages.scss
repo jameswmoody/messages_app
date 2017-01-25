@@ -113,10 +113,15 @@ form textarea {
   padding: 20px;
   margin-bottom: 10px;
   width: 50vw;
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .delete-link {
-  font-size: 14px;
+  font-size: 12px;
   float: right;
   text-decoration: none;
   color: #ff4444;

@@ -73,6 +73,16 @@ body {
   margin-top: 20px;
   border-radius: 0;
   border: none;
+  background-color: rgba(0,0,0,0);
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #9CD6BA;
+  font-size: 18px;
+}
+.login-btn:hover {
+  float: right;
+  margin-top: 20px;
+  border-radius: 0;
+  border: none;
   background-color: #EBEBEB;
 }
 .login-btn a {
@@ -132,7 +142,7 @@ form textarea {
   min-height: 100px;
   padding: 16px;
   transition: border 0.5s;
-  // width: calc(100% - 32px);
+  width: calc(100% - 32px);
 }
 
 form textarea:focus {

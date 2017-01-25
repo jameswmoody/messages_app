@@ -27,15 +27,13 @@ body {
   text-align: center;
 }
 .header img {
-  margin: 15px 0 0;
+  margin-bottom: 35px;
   width: 60px;
   opacity: 0.5;
   display: inline;
 }
 .logo {
   display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
   color: #fff;
   opacity: 0.5;
   position: relative;
@@ -46,7 +44,6 @@ body {
 }
 
 .center {
-  margin: auto;
   width: 40%;
 }
 
@@ -71,6 +68,16 @@ body {
   text-decoration: none;
   display: inline-block;
 }
+.login-btn {
+  float: right;
+  margin-top: 20px;
+  border-radius: 0;
+  border: none;
+  background-color: #EBEBEB;
+}
+.login-btn a {
+  text-decoration: none;
+}
 
 form label {
   font-family: 'Roboto', sans-serif;
@@ -84,6 +91,9 @@ form textarea {
 .container {
   width: 70%;
   margin: 0 auto;
+}
+.row {
+  margin: auto;
 }
 
 .message {
@@ -105,22 +115,6 @@ p.time {
   color: #0084d7;
   font-size: 12px;
   margin-top: 12px;
-}
-
-button {
-  background-color: #0D9D6C;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-  padding: 12px 24px;
-  transition: background-color 0.5s;
-}
-
-button:hover {
-  background-color: #83C98B;
-  transition: background-color 0.5s;
 }
 
 form label {
@@ -158,5 +152,15 @@ form textarea:focus {
     .center {
       margin: auto;
       width: 70%;
+    }
+    .logo {
+      display: none;
+    }
+    .header img {
+      margin-left: 25%;
+      margin-top: 15px;
+    }
+    .message {
+      width: 60vw;
     }
 }

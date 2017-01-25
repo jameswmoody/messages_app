@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MessagesApp</title>
     <%= csrf_meta_tags %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!--[if lt IE 9]>
@@ -14,12 +15,19 @@
   </head>
 
   <body>
+
     <div class="header">
       <div class="container">
-        <a href="../.."><h1 class="logo">MessagesApp</h1> <img src="http://vignette2.wikia.nocookie.net/titanfall/images/3/3a/Icon_Chat.png/revision/latest?cb=20140504182858"></a>
+        <a href="../.."><h1 class="logo">MessagesApp</h1> <img class="logo-img" src="http://vignette2.wikia.nocookie.net/titanfall/images/3/3a/Icon_Chat.png/revision/latest?cb=20140504182858"></a>
+          <% if logged_in? %>
+            <%= link_to "Log out".html_safe, logout_path, method: "delete", class: "login-btn btn btn-default navbar-btn" %>
+          <% else %>
+            <%= link_to "Log in".html_safe, login_path, class: "login-btn btn btn-default navbar-btn" %>
+          <% end %>
       </div>
     </div>
 
     <%= yield %>
+
   </body>
 </html>

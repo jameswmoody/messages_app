@@ -115,11 +115,18 @@ form textarea {
   width: 50vw;
   float: left;
 }
+.user_name {
+  font-weight: bold;
+}
+
 
 .right {
   float: right;
+  background-color: #E5F9EC;
 }
-
+.text-right {
+  text-align: right;
+}
 .delete-link {
   font-size: 12px;
   float: right;

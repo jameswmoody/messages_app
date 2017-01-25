@@ -3,7 +3,7 @@
     <% @messages.each do |message| %>
     <div class="message <%= 'right' if logged_in? && message.id%3==0 %>">
     <p class="content"><%= message.content %></p>
-    <p class="time <%= 'right' logged_in? &&  if message.id%3==0 %>"><%= time_ago_in_words(message.created_at) %><br>
+    <p class="time <%= 'right' logged_in? && if message.id%3==0 %>"><%= time_ago_in_words(message.created_at) %><br>
       <% if logged_in? && message.id%3==0 %>
         <%= link_to 'Delete', message_path(message),
             class: "delete-link",

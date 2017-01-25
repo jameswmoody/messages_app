@@ -10,9 +10,12 @@
           data: { confirm: 'Are you sure?' } %></p>
     </div>
       <% end %>
-      <%= link_to 'New Message', "messages/new",
-                  class: "global-btn" %>
 
-      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+      <% if logged_in? %>
+        <%= link_to 'New Message', "messages/new", class: "global-btn" %>
+        <%= link_to "Log out", logout_path, method: "delete" %>
+      <% else %>
+        <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+      <% end %>
   </div>
 </div>

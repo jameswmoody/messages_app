@@ -6,16 +6,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 
+/* Layout */
 
 html, body, p {
   margin: 0;
 }
-
 body {
   background-color: #eee;
   font-family: 'Roboto', sans-serif;
 }
-
 .header {
   background-color: #0D9D6C;
   background: #0D9D6C; /* For browsers that do not support gradients */
@@ -27,14 +26,12 @@ body {
   height: 80px;
   text-align: center;
 }
-
 .header img {
   margin: 15px 0 0;
   width: 60px;
   opacity: 0.5;
   display: inline;
 }
-
 .logo {
   display: inline-block;
   margin-top: auto;
@@ -48,25 +45,17 @@ body {
   font-size: 42px;
 }
 
-form label {
-  font-family: sans-serif;
+.center {
+  margin: auto;
+  width: 40%;
 }
 
-form textarea {
-  border-radius: 0px;
-}
-
-.container {
-  width: 480px;
-  margin: 0 auto;
-}
-
-.messages, .create {
-  margin: 40px 0;
+.messages {
+  margin-top: 40px;
 }
 
 .global-btn,
-.create .actions input {
+.actions input {
   background: -webkit-linear-gradient(#5FBA7D, #0D9D6C); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#5FBA7D, #0D9D6C); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#5FBA7D, #0D9D6C); /* For Firefox 3.6 to 15 */
@@ -76,11 +65,25 @@ form textarea {
   color: #fff;
   cursor: pointer;
   font-size: 14px;
-  margin-top: 10px;
+  margin: 10px;
   padding: 12px 24px;
   transition: background-color 0.5s;
   text-decoration: none;
   display: inline-block;
+}
+
+form label {
+  font-family: 'Roboto', sans-serif;
+  color: #3E4551;
+}
+
+form textarea {
+  border-radius: 0px;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .message {
@@ -88,6 +91,7 @@ form textarea {
   font-weight: 300;
   padding: 20px;
   margin-bottom: 10px;
+  width: 50vw;
 }
 
 .delete-link {
@@ -143,13 +147,16 @@ form textarea:focus {
   transition: border 0.5s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
     .container {
       width: 100%;
       margin: 0 auto;
     }
-
     .messages, .create {
       padding: 0 20px;
+    }
+    .center {
+      margin: auto;
+      width: 70%;
     }
 }

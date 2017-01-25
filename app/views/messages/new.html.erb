@@ -1,13 +1,12 @@
-<div class="create">
-    <div class="container">
-      <%= form_for(@message) do |f| %>
-      <div class="field">
-      <%= f.label :message %><br>
+<div class="container">
+  <%= form_for(@message) do |f| %>
+    <div class="field">
+     <h1>Type your message</h1>
       <%= f.text_area :content %>
+
+      <div class="actions">
+        <%= f.submit "Create" %>
       </div>
-    <div class="actions">
-      <%= f.submit "Create" %>
     </div>
       <% end %>
-   </div>
 </div>

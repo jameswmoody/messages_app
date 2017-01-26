@@ -1,24 +1,22 @@
-# README
+# MessagesApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a message web app that allows users to create sign up, login, and post messages. Any user that logs in has the ability to contribute to one global group conversion. Future updates will include the ability to create individual conversations and create and update a user profile page.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+* [Ruby on Rails](http://rubyonrails.org/) - The web framework used
+* [bcrypt](https://rubygems.org/gems/bcrypt-ruby/versions/3.1.5) - Secure hash algorithm
+* [Gravatar](http://en.gravatar.com/) - Globally Recognized Avatars
 
-* System dependencies
 
-* Configuration
+## Authors
 
-* Database creation
+* **James W Moody** - *Initial work* - [jameswmoody](https://github.com/jameswmoody)
 
-* Database initialization
+## License
 
-* How to run the test suite
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-* Services (job queues, cache servers, search engines, etc.)
+## Acknowledgments
 
-* Deployment instructions
-
-* ...
+* **Michael Hartl** - *User Sign-up/Login* - The Ruby on Rails Tutorial

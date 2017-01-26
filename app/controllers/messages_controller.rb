@@ -8,7 +8,8 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
+    @user = User.find(current_user)
+    @message = @user.messages.create(message_params)
     if @message.save
       redirect_to '/messages'
     else

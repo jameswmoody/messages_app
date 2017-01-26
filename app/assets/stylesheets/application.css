@@ -22,7 +22,7 @@
  }
 
  .field_with_errors {
-   @extend .has-error;
+   @extend .has-error !optional;
    .form-control {
      color: #a94442;
    }

@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ #error_explanation {
+   color: red;
+   ul {
+     color: red;
+     margin: 0 0 30px 0;
+   }
+ }
+
+ .field_with_errors {
+   @extend .has-error;
+   .form-control {
+     color: #a94442;
+   }
+ }
+
+ .alert {
+   margin: auto;
+   margin-bottom: 10px;
+ }
+.alert-top {
+  margin-top: 85px;
+  width: 60vw;
+}

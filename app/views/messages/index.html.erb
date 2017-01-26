@@ -1,33 +1,30 @@
-<div class="messages">
-  <div class="container">
-    <% @messages.each do |message| %>
-    <div class="message <%= 'right' if logged_in? && message.user_id==current_user.id %>">
-
-      <% if message.user_id==current_user.id %>
-        <%= '<p class="user_name text-right">Me</p>'.html_safe %>
-      <% else %>
-        <p class="user_name"><%= message.user.name %></p>
-      <% end %>
-
-    <p class="content"><%= message.content %></p>
-    <p class="time <%= 'right' if message.user_id==current_user.id %>"><%= time_ago_in_words(message.created_at) %><br>
-      <% if message.user_id==current_user.id %>
-        <%= link_to 'Delete', message_path(message),
-            class: "delete-link",
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
-      <% end %>
-    </div>
-      <% end %>
-  </div>
-  <div class="container">
-    <% if logged_in? %>
-      <%= link_to 'New Message', "messages/new", class: "global-btn" %>
+<div class="container">
+  <% @messages.each do |message| %>
+  <div class="message <%= 'right' if logged_in? && message.user_id==current_user.id %>">
+    <% if message.user_id==current_user.id %>
+      <%= '<p class="user_name text-right">Me</p>'.html_safe %>
     <% else %>
-      <%= link_to "Log in to add a new message", login_path %></p>
+      <p class="user_name"><%= message.user.name %></p>
     <% end %>
-    <br><br>
+
+  <p class="content"><%= message.content %></p>
+  <p class="time <%= 'right' if message.user_id==current_user.id %>"><%= time_ago_in_words(message.created_at) %><br>
+    <% if message.user_id==current_user.id %>
+      <%= link_to 'Delete', message_path(message),
+          class: "delete-link",
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
   </div>
+    <% end %>
+</div>
+<div class="container">
+  <% if logged_in? %>
+    <%= link_to 'New Message', "messages/new", class: "global-btn" %>
+  <% else %>
+    <%= link_to "Log in to add a new message", login_path %></p>
+  <% end %>
+<br><br>
 </div>
 <script>
   window.scrollTo(0, document.body.clientHeight);

@@ -31,6 +31,7 @@ body {
   width: 100%
 }
 .header img {
+  margin: 5px;
   margin-bottom: 35px;
   width: 60px;
   opacity: 0.5;
@@ -51,7 +52,7 @@ body {
   margin-top: 100px;
 }
 
-.global-btn,
+.global-btn, .global-btn:hover,
 .actions input {
   background: -webkit-linear-gradient(#5FBA7D, #0D9D6C); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#5FBA7D, #0D9D6C); /* For Opera 11.1 to 12.0 */
@@ -114,6 +115,7 @@ form textarea {
   margin-bottom: 10px;
   width: 50vw;
   float: left;
+  border-radius: 10px;
 }
 .user_name {
   font-weight: bold;
@@ -132,6 +134,9 @@ form textarea {
   float: right;
   text-decoration: none;
   color: #ff4444;
+}
+.delete-link:hover {
+  text-decoration: none;
 }
 
 p.time {

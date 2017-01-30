@@ -1,17 +1,55 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Forms
 
-
-// Sign Up
-
+form label {
+  color: #3E4551;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  width: 100%;
+}
+form textarea {
+  border: 1px solid transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 20px 0 10px;
+  min-height: 100px;
+  padding: 16px;
+  transition: border 0.5s;
+  width: calc(100% - 32px);
+}
 .field {
   width: 100%;
   height: 25px;
-  border: none;
   margin-top: 6px;
   margin-bottom: 6px;
+  border: none;
+  border-radius: 0px;
 }
+
+// Form Errors
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+.field_with_errors {
+  @extend .has-error !optional;
+  .form-control {
+    color: #a94442;
+  }
+}
+.alert {
+  margin: auto;
+  margin-bottom: 10px;
+}
+.alert-top {
+ width: 60vw;
+}
+
+// Media
 
 @media screen and (max-width: 450px) {
   .field {

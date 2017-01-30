@@ -1,0 +1,107 @@
+// Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+// Layout
+
+html, body, p {
+  margin: 0;
+}
+body {
+  background-color: #eee;
+  font-family: 'Roboto', sans-serif;
+}
+.header {
+  background-color: #0D9D6C;
+  background: linear-gradient(#5FBA7D, #0D9D6C);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: center;
+}
+.header img {
+  margin: 5px 5px 35px 5px;
+  width: 60px;
+  opacity: 0.5;
+}
+.logo {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-weight: normal;
+  font-size: 42px;
+  margin-top: 20px;
+  bottom: 10px;
+  opacity: 0.5;
+}
+h1 {
+  color: #3E4551;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin-top: 0;
+}
+
+// Buttons
+
+.global-btn, .global-btn:hover,
+.actions input {
+  background: linear-gradient(#5FBA7D, #0D9D6C);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 0px;
+}
+.login-btn {
+  color: #9CD6BA;
+  background-color: rgba(0,0,0,0);
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 18px;
+  float: right;
+  margin-top: 20px;
+  border-radius: 0;
+  border: none;
+  a {
+    text-decoration: none;
+  }
+}
+.login-btn:hover {
+  background-color: #EBEBEB;
+}
+
+// Bootstrap Overrides
+.container {
+  width: 70%;
+}
+.row {
+  margin: auto;
+}
+
+// Mobile
+
+@media screen and (max-width: 450px) {
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .logo {
+      font-size: 18px;
+      margin-left: 25%;
+    }
+    .header {
+      height: 40px;
+    }
+    .header img {
+      margin-top: 8px;
+      margin-left: 1px;
+      width: 30px;
+    }
+    .login-btn {
+      margin-top: 2px;
+    }
+}

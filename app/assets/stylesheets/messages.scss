@@ -1,140 +1,28 @@
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
-
-/* Layout */
-
-html, body, p {
-  margin: 0;
-}
-body {
-  background-color: #eee;
-  font-family: 'Roboto', sans-serif;
-}
-.header {
-  background-color: #0D9D6C;
-  background: #0D9D6C; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#5FBA7D, #0D9D6C); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#5FBA7D, #0D9D6C); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#5FBA7D, #0D9D6C); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#5FBA7D, #0D9D6C); /* Standard syntax */
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
-  height: 80px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%
-}
-.header img {
-  margin: 5px;
-  margin-bottom: 35px;
-  width: 60px;
-  opacity: 0.5;
-  display: inline;
-}
-.logo {
-  display: inline-block;
-  color: #fff;
-  opacity: 0.5;
-  position: relative;
-  bottom: 10px;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: normal;
-  font-size: 42px;
-  margin-top: 20px;
-}
-
-h1 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  color: #3E4551;
-  margin-top: 0;
-}
+// Messages
 
 .messages {
   margin-top: 100px;
 }
-
-.global-btn, .global-btn:hover,
-.actions input {
-  background: -webkit-linear-gradient(#5FBA7D, #0D9D6C); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#5FBA7D, #0D9D6C); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#5FBA7D, #0D9D6C); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#5FBA7D, #0D9D6C); /* Standard syntax */
-  border: none;
-  border-radius: 0px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  margin: 10px;
-  padding: 12px 24px;
-  transition: background-color 0.5s;
-  text-decoration: none;
-  display: inline-block;
-}
-.login-btn {
-  float: right;
-  margin-top: 20px;
-  border-radius: 0;
-  border: none;
-  background-color: rgba(0,0,0,0);
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  color: #9CD6BA;
-  font-size: 18px;
-}
-.login-btn:hover {
-  float: right;
-  margin-top: 20px;
-  border-radius: 0;
-  border: none;
-  background-color: #EBEBEB;
-}
-.login-btn a {
-  text-decoration: none;
-}
-
-form label {
-  font-family: 'Roboto', sans-serif;
-  color: #3E4551;
-}
-
-form textarea {
-  border-radius: 0px;
-}
-
-.container {
-  width: 70%;
-
-
-}
-.row {
-  margin: auto;
-}
-
 .message {
   background-color: #fff;
   font-weight: 300;
-  padding: 20px;
-  margin-bottom: 10px;
   width: 50vw;
   float: left;
+  padding: 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 .user_name {
   font-weight: bold;
 }
-
-
 .right {
   float: right;
   background-color: #E5F9EC;
 }
-.text-right {
-  text-align: right;
+p.time {
+  color: #0084d7;
+  font-size: 12px;
+  margin-top: 12px;
 }
 .delete-link {
   font-size: 12px;
@@ -146,50 +34,14 @@ form textarea {
   text-decoration: none;
 }
 
-p.time {
-  color: #0084d7;
-  font-size: 12px;
-  margin-top: 12px;
-}
-
-form label {
-  display: block;
-  width: 100%;
-}
-
-form textarea {
-  border: 1px solid transparent;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  margin: 20px 0 10px;
-  min-height: 100px;
-  padding: 16px;
-  transition: border 0.5s;
-  width: calc(100% - 32px);
-}
-
-form textarea:focus {
-  border: 1px solid #0084d7;
-  box-shadow: 0;
-  outline: 0;
-  transition: border 0.5s;
-}
+// Media
 
 @media screen and (max-width: 450px) {
-    .container {
-      width: 100%;
-      margin: 0 auto;
+    .messages {
+      margin-top: 50px;
     }
     .messages, .create {
       padding: 0 20px;
-    }
-    .logo {
-      display: none;
-    }
-    .header img {
-      margin-left: 25%;
-      margin-top: 15px;
     }
     .message {
       width: 60vw;
